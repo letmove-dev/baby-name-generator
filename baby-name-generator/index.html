@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เว็บสุ่มชื่อลูกมงคล</title>
+</head>
+<body>
+    <h1>👶 ระบบสุ่มชื่อลูกมงคล</h1>
+
+    <!-- ตัวกรอง -->
+    <select id="genderFilter">
+        <option value="all">ทุกเพศ</option>
+        <option value="boy">ชาย</option>
+        <option value="girl">หญิง</option>
+    </select>
+
+    <select id="dayFilter">
+        <option value="all">ทุกวันเกิด</option>
+        <option value="monday">วันจันทร์</option>
+        <option value="tuesday">วันอังคาร</option>
+        <option value="wednesday">วันพุธ</option>
+        <option value="thursday">วันพฤหัสบดี</option>
+        <option value="friday">วันศุกร์</option>
+        <option value="saturday">วันเสาร์</option>
+        <option value="sunday">วันอาทิตย์</option>
+    </select>
+
+    <button onclick="generateRandomName()">🎲 กดสุ่มชื่อ!</button>
+
+    <hr>
+
+    <!-- ช่องแสดงผล -->
+    <div>
+        <span id="genderTag">-</span>
+        <h2 id="nameResult">กดปุ่มด้านบนเพื่อสุ่มชื่อ</h2>
+        <p id="meaningResult"></p>
+    </div>
+
+    <!-- ดึงไฟล์ script.js มาใช้งาน -->
+    <script src="script.js"></script>
+</body>
+</html>
