@@ -1,0 +1,80 @@
+/* แต่งโทนสีรวม และจัดให้อยู่ตรงกลาง */
+body {
+    font-family: 'Kanit', sans-serif, Tahoma;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* กล่องการ์ดหลัก */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    color: #ff7b9c;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* แต่งตัวกรอง Dropdown */
+select {
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    font-size: 0.95rem;
+    margin: 5px;
+    outline: none;
+}
+
+/* ปุ่มกดสุ่มสุดน่ารัก */
+button {
+    background-color: #ff7b9c;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.1s, background-color 0.2s;
+    box-shadow: 0 4px 10px rgba(255, 123, 156, 0.4);
+}
+
+button:hover {
+    background-color: #ff527b;
+    transform: scale(1.05);
+}
+
+/* แสดงผลชื่อที่สุ่มได้ */
+#nameResult {
+    font-size: 2.2rem;
+    color: #4a90e2;
+    margin: 15px 0 5px 0;
+}
+
+#meaningResult {
+    color: #666;
+    font-size: 1rem;
+}
+
+#genderTag {
+    background-color: #e1f5fe;
+    color: #0288d1;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
