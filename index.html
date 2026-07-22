@@ -2,43 +2,55 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>เว็บสุ่มชื่อลูกมงคล</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>👶 ระบบสุ่มชื่อลูกมงคล</h1>
+    <div class="container">
+        <h1>👶 ระบบสุ่มชื่อลูกมงคล</h1>
 
-    <!-- ตัวกรอง -->
-    <select id="genderFilter">
-        <option value="all">ทุกเพศ</option>
-        <option value="boy">ชาย</option>
-        <option value="girl">หญิง</option>
-    </select>
+        <!-- 1. ปุ่มเลือกประเภทชื่อ (ชื่อจริง / ชื่อเล่น) -->
+        <div class="type-options" style="margin-bottom: 12px;">
+            <button class="type-btn active" onclick="selectType('all', this)">✨ ทุกประเภท</button>
+            <button class="type-btn" onclick="selectType('real', this)">🏷️ ชื่อจริง</button>
+            <button class="type-btn" onclick="selectType('nickname', this)">🎈 ชื่อเล่น</button>
+        </div>
 
-    <select id="dayFilter">
-        <option value="all">ทุกวันเกิด</option>
-        <option value="monday">วันจันทร์</option>
-        <option value="tuesday">วันอังคาร</option>
-        <option value="wednesday">วันพุธ</option>
-        <option value="thursday">วันพฤหัสบดี</option>
-        <option value="friday">วันศุกร์</option>
-        <option value="saturday">วันเสาร์</option>
-        <option value="sunday">วันอาทิตย์</option>
-    </select>
+        <!-- 2. ปุ่มเลือกเพศ -->
+        <div class="gender-options">
+            <button class="gender-btn active" onclick="selectGender('all', this)">👶 ทุกเพศ</button>
+            <button class="gender-btn" onclick="selectGender('boy', this)">👦 ชาย</button>
+            <button class="gender-btn" onclick="selectGender('girl', this)">👧 หญิง</button>
+        </div>
 
-    <button onclick="generateRandomName()">🎲 กดสุ่มชื่อ!</button>
+        <!-- 3. ตัวกรองวันเกิด -->
+        <div style="margin-top: 15px;">
+            <select id="dayFilter">
+                <option value="all">📅 ทุกวันเกิด</option>
+                <option value="monday">วันจันทร์</option>
+                <option value="tuesday">วันอังคาร</option>
+                <option value="wednesday">วันพุธ</option>
+                <option value="thursday">วันพฤหัสบดี</option>
+                <option value="friday">วันศุกร์</option>
+                <option value="saturday">วันเสาร์</option>
+                <option value="sunday">วันอาทิตย์</option>
+            </select>
+        </div>
 
-    <hr>
+        <!-- ปุ่มสุ่ม -->
+        <button class="random-btn" onclick="generateRandomName()">🎲 กดสุ่มชื่อ!</button>
 
-    <!-- ช่องแสดงผล -->
-    <div>
-        <span id="genderTag">-</span>
-        <h2 id="nameResult">กดปุ่มด้านบนเพื่อสุ่มชื่อ</h2>
-        <p id="meaningResult"></p>
+        <hr style="margin: 20px 0; border: none; border-top: 1px dashed #eee;">
+
+        <!-- ช่องแสดงผล -->
+        <div>
+            <span id="genderTag">-</span>
+            <h2 id="nameResult">กดปุ่มด้านบนเพื่อสุ่มชื่อ</h2>
+            <p id="meaningResult"></p>
+        </div>
     </div>
 
-    <!-- ดึงไฟล์ script.js มาใช้งาน -->
     <script src="script.js"></script>
 </body>
 </html>
